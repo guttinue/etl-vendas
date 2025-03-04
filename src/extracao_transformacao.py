@@ -50,7 +50,7 @@ def tratarDados(df: pd.DataFrame) -> pd.DataFrame:
 
     df.dropna(subset=["Order Date"], inplace=True) # removendo linhas com valores nulos 
     
-    df["Order Date BR"] = df["Order Date"].dt.strftime("%d/%m/%Y")  
+    df["Order Date BR"] = df["Order Date"].dt.strftime("%d/%m/%Y") # convertendo para formato brasileiro  
     return df
 
 def salvarDataFrame(df: pd.DataFrame, caminho: Path) -> None:
